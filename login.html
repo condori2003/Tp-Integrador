@@ -12,17 +12,9 @@
 <body>
     <header>
         <div class="logo-nav-container">
-            <a href="index.html">
+            <a href="login.html">
                 <img src="./assets/logo.png" alt="Logo" class="logo" />
             </a>
-            <!-- <nav class="menu">
-                <ul>
-                    <li><a href="./index.html">Home</a></li>
-                    <li><a href="./vista_series.html">Series</a></li>
-                    <li><a href="../vista_peliculas.html">Películas</a></li>
-                    <li><a class="perfil" href="#">Perfil</a></li>
-                </ul>
-            </nav> -->
         </div>
     </header>
     <section class="img-banner">
@@ -34,10 +26,17 @@
     </section>
     <section class="contenedor-login"> 
         <form class="form" action="" method="post">
-            <input type="email" name="email" class="box" placeholder="Email o número de celular">
-            <input type="password" name="Contrasena" class="box" placeholder="Contraseña">
-            <a href="index.html" class="enlace">iniciar sesión</a>
-            <input type="submit" value="Iniciar Sesión" class="submit">
+            <div class="input_field">
+                <label for="username">Nombre de usuario</label>
+                <input type="text" name="username" class="box" placeholder="Usuario">
+            </div>
+            <div class="input_field">
+                <label for="password">Contraseña</label>
+                <input type="password" name="password" class="box" placeholder="Contraseña">
+            </div>
+            <div class="input_field">
+                <a href="index.html" class="btn">Iniciar Sesión</a>
+            </div>
             <a href="recuperar.html" class="enlace">¿Olvidaste contraseña?</a>
             <a href="registrar.html" class="enlace">Registrarse</a>
         </form>
