@@ -334,3 +334,53 @@ hr {
 }
 
 /*FIN FOOTER */
+
+
+/* LOGIN */
+.img-banner{
+    position: relative; /* El contenedor de la imagen */
+    width: 100%; /* Ancho del contenedor */
+    height: 200px; /* Altura del contenedor */
+    display: flex; /* Usar flexbox para alinear */
+    flex-direction: column; /* Columna para alinear la imagen y el texto */
+    justify-content: center; /* Centrar verticalmente */
+    align-items: center; /* Centrar horizontalmente */
+}
+.img-banner img{
+    width: 100%; /* Imagen ocupa todo el ancho del contenedor */
+    height: 200px; /* Imagen ocupa todo el alto del contenedor */
+    object-fit: cover; /* Ajustar la imagen a la proporción de la imagen */
+}
+.banner-texto{
+    position: absolute; /* Posicionamiento absoluto */
+    top: 60%; /* Centrar verticalmente */
+    left: 50%; /* Centrar horizontalmente */
+    transform: translate(-50%, -50%); /* Ajustar la posición para centrar el texto */
+    color: white; /* Texto blanco */
+    text-align: center; /* Alinear el texto centrado */
+}
+.banner-texto h1{
+    font-size: 50px; /* Tamaño del texto */
+}
+.banner-texto p{
+    font-size: 20px; /* Tamaño del texto */
+}
+
+.contenedor-login{
+    display: flex;
+    justify-content: center; /* Centra horizontalmente (eje principal) */
+    /* justify-content: center;
+    align-items: center;
+    flex-direction: column; */
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 400px;
+    height: auto;
+    background-color: white;
+    gap: 10px;
+    padding: 20px;
+}
