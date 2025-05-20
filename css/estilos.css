@@ -368,23 +368,19 @@ hr {
 
 .contenedor-login{
     display: flex;
-    justify-content: center; /* Centra horizontalmente (eje principal) */
-    /* justify-content: center;
-    align-items: center;
-    flex-direction: column; */
+    justify-content: center;
 }
 
 .form{
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     width: 600px;
-    height: auto;
     background-color: rgb(0, 0, 0);
     gap: 20px;
     padding: 20px;
     border: 2px solid #070707;
-    margin-top: 20px;
     box-sizing: border-box;
     
 }
@@ -399,6 +395,10 @@ form .input_field label{
     margin-right: 10px;
     font-size: 15px;
 }
+.form .input_field label.titulo{
+    width: 200px;
+    margin-right: 0px;
+}
 .form .input_field input{
     width: 100%;
     outline: none;
@@ -408,22 +408,34 @@ form .input_field label{
     border-radius: 3px;
     transition: all 0.3s ease;
 }
+.form_registro .input_field input{
+    width: 60%;
+}
+.form_registro .input_field .box_tarjeta{
+    width: 40%;
+    margin-left: 45px;
+}
+.form_registro .input_field .box_clave{
+    width: 20%;
+    margin-left: 80px;
+    text-align: center;
+}
 
 .form .input_field input:focus{
     border: 2px solid #d40303;
 }
-.form .input_field .btn{
+.btn{
     width: 200px;
     padding: 8px 10px;
     font-size: 15px;
     border: none;
     background: white;
     color: black;
-    border-radius: 8px;
+    border-radius: 4px;
     text-align: center;
 }
 
-.form .input_field .btn:hover{
+.btn:hover{
     background: #d40303;
     color: white;
 }
@@ -431,6 +443,22 @@ form .input_field label{
     color: white;
     text-decoration: underline;
 }
+.input_field_btns{
+    display: flex;
+    flex-wrap: wrap; /* Para pantallas pequeñas */
+    justify-content: space-between; /* Espaciado horizontal */
+    width: 80%; /* Asegura que el contenedor ocupe todo el ancho */
+}
+.input_field_btns .btn{
+    margin-bottom: 10px; /* Espacio entre los botones en la siguiente línea */
+    width: 48%; /* Ocupan un poco menos del ancho para el espaciado */
+}
+/* REGISTRO  */
+.registro{
+    display: flex;
+    margin: 0px 200px;
+}
+
 
 /* LOGIN Responsive */
 @media(max-width: 420px) {
@@ -443,14 +471,32 @@ form .input_field label{
     .form{
         margin-top: 0px;
     }
-    .contenedor-login .form .input_field{
+    .input_field{
         flex-direction: column;
         align-items: flex-start;
     }
-    .contenedor-login .form .input_field label{
+    .input_field label{
         margin-bottom: 5px;
     }
 }
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
+    .input_field_btns{	
+    flex-direction: column; /* En la siguiente línea, los botones se apilan */
+    justify-content: center; /* Centrar los botones verticalmente */
+  }
 
+  .input_field_btns .btn{
+    width: 100%; /* Ocupan todo el ancho en pantallas pequeñas */
+  }
+  .registro{
+    flex-direction: column;
+    box-sizing: border-box;
+    margin: 0px;
+  }
+  .form_registro{
+    flex-direction: column;
+    box-sizing: border-box;
+    width: 100%;
+  }
+  
 }
