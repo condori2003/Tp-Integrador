@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilos.css">
+    <title>Registro</title>
+</head>
+<body class="fondo">
+    <div class="linea">
+        <header class="header">
+            <nav class="header__nav"><a href="login.html"><img src="img/logo.png" alt="NETFLIX"></a></nav>
+        </header>
+    </div>
+    <main class="contenedor_registro">
+        <section class="form_registro">
+            <h1>Registrarse</h1>
+            <label>Nombre:</label><input type="name" name="name" class="box box_registro" placeholder="Ingrese nombre">
+            <label>Apellido:<input type="surname" name="surname" class="box box_registro" placeholder="Ingrese apellido"></label>
+            <label>Email:<input type="email" name="email" class="box box_registro" placeholder="Ingrese email"></label>
+            <label>Usuario:<input type="user" name="user" class="box box_registro" placeholder="Nombre de usuario"></label>
+            <label>Contraseña:<input type="password" name="password" class="box box_registro" placeholder="Contraseña"></label>
+            <label>Repetir contraseña:<input type="password" name="password" class="box box_registro" placeholder="Repetir contraseña"></label>
+        </section>
+        <section class="form_registro">
+            <h1>Metodo de pago</h1>
+            <label class="titulo"><input type="radio" name="radio" class="radio"> Tarjeta de credito</label>
+            <input type="text" name="number" class="box" placeholder="Numero de tarjeta" maxlength="16">
+            <input type="text" name="number" class="box box_clave" placeholder="X X X" maxlength="3">
+            <label class="titulo"><input type="radio" name="radio" class="radio"> Cupon de pago</label>
+            <input type="checkbox" name="checkbox"><label>Pago facil</label>
+            <input type="checkbox" name="checkbox"><label>RapiPago</label>
+            <label class="titulo"><input type="radio" name="radio" class="radio"> Transferencia Bancaria</label>
+            <label>CBU:</label><input type="text" name="number" class="box" placeholder="Numero CBU" maxlength="22">
+            <a href="login.html" class="btn btn-enlace">Confirmar</a>
+            <a href="login.html" class="btn btn-cancelar btn-enlace">Cancelar</a>
+        </section>
+    </main>
+
+</body>
+</html>
