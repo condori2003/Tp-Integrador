@@ -17,66 +17,65 @@
             </a>
         </div>
     </header>
-    <main class="contenedor_login registro">
-        <section class="form form_registro">
+    <main class="main_registro">
+        <section class="form_registro">
+            <h2>Registrarse</h2>
             <div class="input_field">
-                <h1>Registrarse</h1>
+                <label>Nombre</label>
+                <input type="text" name="name" placeholder="Ingrese nombre">
             </div>
             <div class="input_field">
-                <label>Nombre</label><input type="name" name="name" class="box" placeholder="Ingrese nombre">
+                <label>Apellido</label>
+                <input type="text" name="surname" placeholder="Ingrese apellido">
             </div>
             <div class="input_field">
-                <label>Apellido<input type="surname" name="surname" class="box" placeholder="Ingrese apellido"></label>
+                <label>Email</label>
+                <input type="email" name="email" placeholder="Ingrese email">
             </div>
             <div class="input_field">
-                <label>Email<input type="email" name="email" class="box" placeholder="Ingrese email"></label>
+                <label>Usuario</label>
+                <input type="text" name="user" placeholder="Nombre de usuario">
             </div>
             <div class="input_field">
-                <label>Usuario<input type="user" name="user" class="box" placeholder="Nombre de usuario"></label>
+                <label>Contraseña</label>
+                <input type="password" name="password" placeholder="Contraseña">
             </div>
             <div class="input_field">
-                <label>Contraseña<input type="password" name="password" class="box" placeholder="Contraseña"></label>
+                <label>Repetir contraseña</label>
+                <input type="password" name="password" placeholder="Repetir contraseña">   
             </div>
-            <div class="input_field">
-                <label>Repetir contraseña<input type="password" name="password" class="box" placeholder="Repetir contraseña"></label>    
-            </div>
-            <!-- <h1>Registrarse</h1>
-            <label>Nombre:</label><input type="name" name="name" class="box box_registro" placeholder="Ingrese nombre">
-            <label>Apellido:<input type="surname" name="surname" class="box box_registro" placeholder="Ingrese apellido"></label>
-            <label>Email:<input type="email" name="email" class="box box_registro" placeholder="Ingrese email"></label>
-            <label>Usuario:<input type="user" name="user" class="box box_registro" placeholder="Nombre de usuario"></label>
-            <label>Contraseña:<input type="password" name="password" class="box box_registro" placeholder="Contraseña"></label>
-            <label>Repetir contraseña:<input type="password" name="password" class="box box_registro" placeholder="Repetir contraseña"></label> -->
         </section>
-        <section class="form form_registro">
-            <div class="input_field">
-                <h2>Metodo de pago</h2>
+        <section class="form_registro">
+            <h2>Metodo de pago</h2>
+            <div class="input_pago">
+                <div class="input_radio">
+                    <input type="radio" name="radio" class="radio"> <label class="titulo">Tarjeta de debito</label>
+                </div>
+                <div class="input_Tarjeta"> 
+                    <input type="text" name="number" class="box_tarjeta" placeholder="Numero de tarjeta" maxlength="16"> 
+                    <input type="text" name="number" class="box_clave" placeholder="X X X" maxlength="3">
+                </div>
+                <div class="input_radio"> 
+                    <input type="radio" name="radio" class="radio"> 
+                    <label class="titulo">Cupon de pago</label>
+                </div>
+                <div class="input_checkbox"> 
+                    <input type="checkbox" name="checkbox"><label>Pago facil</label>
+                    <input type="checkbox" name="checkbox"><label>RapiPago</label>
+                </div>    
+                <div class="input_radio">   
+                    <input type="radio" name="radio" class="radio">
+                    <label class="titulo">Transferencia Bancaria</label>
+                </div>
+                <div class="input_field">
+                    <label>CBU</label>
+                    <input type="text" name="number" placeholder="Numero CBU" maxlength="22">
+                </div>
+                <div class="input_field_btns">
+                    <a href="login.html" class="btn">Confirmar</a>
+                <a href="login.html" class="btn">Cancelar</a>
+                </div>
             </div>
-            <div class="input_field">
-                <input type="radio" name="radio" class="radio"> <label class="titulo">Tarjeta de debito</label>
-            </div>
-            <div class="input_field"> 
-                <input type="text" name="number" class="box_tarjeta" placeholder="Numero de tarjeta" maxlength="16"> 
-                <input type="text" name="number" class="box_clave" placeholder="X X X" maxlength="3">
-            </div>
-            <div class="input_field"> 
-                <input type="radio" name="radio" class="radio"> <label class="titulo">Cupon de pago</label>
-            </div>
-            <div class="input_field"> 
-                <input type="checkbox" name="checkbox"><label>Pago facil</label>
-                <input type="checkbox" name="checkbox"><label>RapiPago</label>
-            </div>    
-            <div class="input_field">   
-                <input type="radio" name="radio" class="radio"><label class="titulo">Transferencia Bancaria</label>
-            </div>
-            <div class="input_field">
-                <label>CBU</label><input type="text" name="number" class="box" placeholder="Numero CBU" maxlength="22">
-            </div>
-            <div class="input_field_btns">
-                <a href="login.html" class="btn">Confirmar</a>
-            <a href="login.html" class="btn">Cancelar</a>
-            </div>
-            
         </section>
     </main>
 

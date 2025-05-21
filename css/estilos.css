@@ -366,63 +366,95 @@ hr {
     font-size: 20px; /* Tamaño del texto */
 }
 
-.contenedor-login{
-    display: flex;
-    justify-content: center;
+.enlace{
+    color: white;
+    text-decoration: underline;
 }
 
-.form{
+/* REGISTRO  */
+.main_registro{
+    display: flex;
+    width: 100%;
+    max-width: 2040px;
+    justify-content: center;
+    margin-top: 5px;
+} 
+.form_registro{
+    flex: 1;
+    max-width: 500px;
+    padding: 20px;
+    border: 1px solid #333;
+    margin: 0 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    width: 600px;
-    background-color: rgb(0, 0, 0);
-    gap: 20px;
-    padding: 20px;
-    border: 2px solid #070707;
-    box-sizing: border-box;
-    
 }
-.form .input_field{
-    display: flex;
-    align-items: center;
-}
-
-form .input_field label{
-    width: 200px;
-    color: rgb(255, 255, 255);
-    margin-right: 10px;
-    font-size: 15px;
-}
-.form .input_field label.titulo{
-    width: 200px;
-    margin-right: 0px;
-}
-.form .input_field input{
-    width: 100%;
-    outline: none;
-    border: 1px solid #070707;
-    font-size: 15px;
-    padding: 8px 10px;
-    border-radius: 3px;
-    transition: all 0.3s ease;
-}
-.form_registro .input_field input{
-    width: 60%;
-}
-.form_registro .input_field .box_tarjeta{
-    width: 40%;
-    margin-left: 45px;
-}
-.form_registro .input_field .box_clave{
-    width: 20%;
-    margin-left: 80px;
+.form_registro h2 {
+    margin-bottom: 30px;
+    font-size: 24px;
     text-align: center;
 }
 
-.form .input_field input:focus{
-    border: 2px solid #d40303;
+.input_field {
+    width: 100%;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.input_field label {
+    width: 40%;
+    text-align: left;
+    padding-right: 15px;
+}
+.input_field input[type="text"],
+.input_field input[type="email"],
+.input_field input[type="password"] {
+    width: 60%;
+    padding: 10px;
+    border-radius: 4px;
+}
+.input_pago{
+    width: 100%;
+    margin-top: 10px;
+}
+.input_radio{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    margin-top: 18px;
+}
+.input_radio input[type="radio"]{
+    margin-right: 10px;
+}
+.input_Tarjeta{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    margin: 0px 0px 0px 10px;
+    
+}
+.box_tarjeta{
+    width: 65%;
+    padding: 10px;border-radius: 4px;
+}
+.box_clave{
+    width: 25%;
+    padding: 10px;
+    text-align: center;
+    margin-right: 20px;border-radius: 4px;
+}
+.input_checkbox{
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    justify-content: space-around;
+}
+.input_checkbox input[type="checkbox"]{
+    margin-right: 10px;
 }
 .btn{
     width: 200px;
@@ -439,26 +471,20 @@ form .input_field label{
     background: #d40303;
     color: white;
 }
-.form .enlace{
-    color: white;
-    text-decoration: underline;
-}
+
 .input_field_btns{
     display: flex;
-    flex-wrap: wrap; /* Para pantallas pequeñas */
+    margin-top: 30px;
     justify-content: space-between; /* Espaciado horizontal */
-    width: 80%; /* Asegura que el contenedor ocupe todo el ancho */
-}
+    width: 100%; 
+}  
 .input_field_btns .btn{
-    margin-bottom: 10px; /* Espacio entre los botones en la siguiente línea */
-    width: 48%; /* Ocupan un poco menos del ancho para el espaciado */
+    margin-bottom: 10px; 
+    width: 48%; 
 }
-/* REGISTRO  */
-.registro{
-    display: flex;
-    margin: 0px 200px;
+.bottom{
+    justify-content: center;
 }
-
 
 /* LOGIN Responsive */
 @media(max-width: 420px) {
@@ -467,16 +493,6 @@ form .input_field label{
         img{
             height: 150px;
         }
-    }
-    .form{
-        margin-top: 0px;
-    }
-    .input_field{
-        flex-direction: column;
-        align-items: flex-start;
-    }
-    .input_field label{
-        margin-bottom: 5px;
     }
 }
 @media (max-width: 768px) {
@@ -488,14 +504,12 @@ form .input_field label{
   .input_field_btns .btn{
     width: 100%; /* Ocupan todo el ancho en pantallas pequeñas */
   }
-  .registro{
+  .main_registro{
     flex-direction: column;
-    box-sizing: border-box;
-    margin: 0px;
+    align-items: center;
   }
   .form_registro{
-    flex-direction: column;
-    box-sizing: border-box;
+    margin: 10px 0;
     width: 100%;
   }
   
