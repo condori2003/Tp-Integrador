@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -15,16 +14,17 @@
 
     <header>
         <div class="logo-nav-container">
-            <a href="index.html">
+            <a href="./index.html">
                 <img src="./assets/logo.png" alt="Logo" class="logo" />
             </a>
             <nav class="menu">
                 <ul>
-                    <li><a href="./index.html">Home</a></li>
-                    <li><a href="./vista_series.html">Series</a></li>
-                    <li><a href="./vista_peliculas.html">Películas</a></li>
-                    <li><a class="perfil" href="./vista_perfil.html">Perfil</a></li>
-                    <li><a href="./login.html">Salir</a></li>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="./vistas/vista_series.html">Series</a></li>
+                    <li><a href="./vistas/vista_peliculas.html">Películas</a></li>
+                    <li><a href="./vistas/vista_perfil.html">Perfil</a>
+                    <li><a href="./vistas/vista_registro.html">Registro</a></li>
+                    <li><a href="./vistas/vista_login.html">Login</a></li>
                 </ul>
             </nav>
         </div>
@@ -32,10 +32,12 @@
 
     <section class="eventos-top">
         <div class="img-hero" justify-content-center;>
-            <img src="assets/El-eternauta.webp" alt="El-eternauta" class="card-img-hero">
-            <div class="card-body-hero">
-                <h5 class="card-title">El Eternauta</h5>
-            </div>
+            <a href="./vistas/vista_series.html">
+                <img src="assets/El-eternauta.webp" alt="El-eternauta" class="card-img-hero">
+                <div class="card-body-hero">
+                    <h5 class="card-title">El Eternauta</h5>
+                </div>
+            </a>
         </div>
 
     </section>
@@ -64,38 +66,99 @@
         <div class="container-cards">
 
             <div class="card">
-                <img src="assets/portada-Dr.House.webp" alt="Dr.House" class="card-img">
-                <div class="card-body">
-                    <h5 class="card-title">Dr.House</h5>
-                </div>
+                <a href="./VistasSeries/vista_series_DrHouse.html">
+                    <img src="./assets/DrHouse.png" alt="Dr.House" class="card-img" width="320" height="200">
+                    <div class="card-body">
+                        <h5 class="card-title">Dr.House</h5>
+                    </div>
+                </a>
             </div>
 
             <div class="card">
-                <img src="assets/better-call-saul.webp" alt="better-call-saul" class="card-img">
-                <div class="card-body">
-                    <h5 class="card-title">Better Call Saul</h5>
-                </div>
+                <a href="./VistasSeries/vista_series_BCS.html">
+                    <img src="./assets/BetterCallSaul.png" alt="better-call-saul" class="card-img" width="320"
+                        height="200">
+                    <div class="card-body">
+                        <h5 class="card-title">Better Call Saul</h5>
+                    </div>
+                </a>
             </div>
 
             <div class="card">
-                <img src="assets/Breaking-bad.webp" alt="Breaking-bad" class="card-img">
-                <div class="card-body">
-                    <h5 class="card-title">Breaking bad</h5>
-                </div>
+                <a href="./VistasSeries/vista_series_BB.html">
+                    <img src="assets/Breaking-bad.webp" alt="Breaking-bad" class="card-img">
+                    <div class="card-body">
+                        <h5 class="card-title">Breaking bad</h5>
+                    </div>
+                </a>
             </div>
 
             <div class="card">
-                <img src="assets/Dexter-portada.webp" alt="Dexter" class="card-img">
-                <div class="card-body">
-                    <h5 class="card-title">Dexter</h5>
-                </div>
+                <a href="./VistasSeries/vista_series_Dexter.html">
+                    <img src="assets/Dexter-portada.webp" alt="Dexter" class="card-img">
+                    <div class="card-body">
+                        <h5 class="card-title">Dexter</h5>
+                    </div>
+                </a>
             </div>
 
             <div class="card">
-                <img src="assets/vampire.Diaries.webp" alt="vampire-Diaries" class="card-img">
-                <div class="card-body">
-                    <h5 class="card-title"> The vampire Diaries</h5>
-                </div>
+                <a href="./VistasSeries/vista_series_TVD.html">
+                    <img src="assets/vampire.Diaries.webp" alt="vampire-Diaries" class="card-img">
+                    <div class="card-body">
+                        <h5 class="card-title"> The vampire Diaries</h5>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <h2>Peliculas Similares</h2>
+        <br>
+        <div class="container-cards">
+
+            <div class="card">
+                <a href="./vistas-peliculas/vista_pelicula_LDH.html">
+                    <img src="./assets/LluviaDeHamburguesas2.webp" alt="LluviaDeHamburguesas2" class="card-img">
+                    <div class="card-body">
+                        <h5 class="card-title">Lluvia de Hamburguesas 2</h5>
+                    </div>
+                </a>
+            </div>
+
+            <div class="card">
+                <a href="./vistas-peliculas/vista_pelicula_HT.html">
+                    <img src="./assets/Hotel Transylvania.webp" alt="Hotel-Transylvania" class="card-img">
+                    <div class="card-body">
+                        <h5 class="card-title">Hotel Transylvania</h5>
+                    </div>
+                </a>
+            </div>
+
+            <div class="card">
+                <a href="./vistas-peliculas/vista_pelicula_MVF3.html">
+                    <img src="./assets/MVF3.webp" alt="MiVillanoFavorito" class="card-img">
+                    <div class="card-body">
+                        <h5 class="card-title">Mi Villano Favorito 3</h5>
+                    </div>
+                </a>
+            </div>
+
+            <div class="card">
+                <a href="./vistas-peliculas/vista_pelicula_S3.html">
+                    <img src="./assets/Shrek3.webp" alt="Shrek3" class="card-img">
+                    <div class="card-body">
+                        <h5 class="card-title">Shrek Tercero</h5>
+                    </div>
+                </a>
+            </div>
+
+            <div class="card">
+                <a href="./vistas-peliculas/vista_pelicula_TROLLS.html">
+                    <img src="./assets/Trolls.webp" alt="Trolls" class="card-img">
+                    <div class="card-body">
+                        <h5 class="card-title">Trolls</h5>
+                    </div>
+                </a>
             </div>
         </div>
 
@@ -109,9 +172,9 @@
                 <h5>MENÚ</h3>
                     <ul class="menu-list">
                         <li><a href="./index.html">Home</a></li>
-                        <li><a href="./vista_series.html">Series</a></li>
-                        <li><a href="./vista_peliculas.html">Películas</a></li>
-                        <li><a class="perfil" href="#">Perfil</a></li>
+                        <li><a href="./vistas/vista_series.html">Series</a></li>
+                        <li><a href="./vistas/vista_peliculas.html">Películas</a></li>
+                        <li><a href="./vistas/vista_perfil.html">Perfil</a></li>
                     </ul>
             </section>
 
@@ -138,5 +201,5 @@
     </footer>
 
 </body>
-
+<!-- use this script to add a custom message to the cookie consent banner -->
 </html>
