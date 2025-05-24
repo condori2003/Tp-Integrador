@@ -216,53 +216,54 @@ hr {
 /* INICIO VISTA DETALLADA */
 
 .body-peliculas{
-    background-color: black;
+  background-color: black;
+  box-sizing: border-box;
 }
-
-.container-pelicula {
-    margin-top: 50px;
+.container-pelicula{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 10px;
 }
-
-.detalle-body {
-    display: flex;
-    justify-content: space-between;
+.video {
+  width: 500px;
+  display: flex;
+  align-items: center;
 }
-
-
-.img-boton {
-    text-align: center;
-    margin-left: 30px;
-
+.video-trailer {
+  position: relative;
+  box-sizing: border-box;
 }
-
-.img-boton image {
-    display: block;
-}
-
-.img-boton button {
-    margin-top: 20px;
-    background-color: white;
-    padding: 10px 15px 10px 15px;
-    border-radius: 15px;
-    width: 200px;
-    font-weight: bold;
-
-}
-
-.img-boton button:hover {
-    transform: scale(1.10);
-}
-
 .peliculas-similares {
-    margin-top: 50px;
+    margin-top: 20px;
 }
 
 .peliculas-similares h2 {
-    margin-left: 30px;
+  text-align: center;
 }
-
-.descripcion h1, p{
-  margin-left: 30px;
+.descripcion{
+  display: flex;
+  flex-direction: column;
+  padding: 0px 1rem;
+  width: 500px;
+}
+.descripcion-texto{
+  display: flex;
+  align-items: center;
+}
+.descripcion-texto label{
+  font-size: medium;
+}
+.enlace-actor{
+  color: white;
+}
+.descripcion-texto select{
+  width: 25%;
+  margin: 0px 10px;
+}
+.boton-comenzar {
+  width: 80%;
+  margin: 10px auto;
 }
 /* FIN VISTA DETALLADA */
 
@@ -770,7 +771,6 @@ hr {
 }
 
 @media (min-width: 480px) {
- 
 }
 
 /* Teléfonos grandes (≥576px) */
@@ -800,10 +800,7 @@ hr {
 
   .descripcion{
     font-size: 20px;
-    margin-top: 5px;
-    margin-left: 5px;
-  
-  }
+  }  
 
 }
 
