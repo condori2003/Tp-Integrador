@@ -14,12 +14,12 @@
 <body class="Home">
   <header>
     <div class="logo-nav-container">
-      <a href="../index.html">
+      <a href="index.html">
         <img src="../assets/logo.png" alt="Logo" class="logo" />
       </a>
       <nav class="menu">
         <ul>
-          <li><a href="../index.html">Home</a></li>
+          <li><a href="index.html">Home</a></li>
           <li><a href="./vista_series.html">Series</a></li>
           <li><a href="./vista_peliculas.html">Películas</a></li>
           <li><a href="./vistas/vista_perfil.html">Perfil</a></li>
@@ -29,7 +29,7 @@
     </div>
   </header>
 
-  <form action="../index.html" method="post" class="perfil-container">
+  <form action="index.html" method="post" class="perfil-container">
     <div class="perfil-usuario">
       <img
         src="../assets/icono-perfil-usuario-estilo-plano-ilustracion-vector-avatar-miembro-sobre-fondo-aislado-concepto-negocio-signo-permiso-humano_157943-15752.avif"
@@ -45,24 +45,24 @@
         <input type="password" id="pass-actual" class="input-movil" value="************" readonly>
 
         <label for="pass-nueva">Nueva contraseña:</label>
-        <input type="password" id="pass-nueva" class="input-movil" placeholder="Ingrese nueva contraseña">
+        <input type="password" id="pass-nueva" class="input-movil" placeholder="Ingrese nueva contraseña" required>
 
         <label for="pass-repetir">Repetir contraseña:</label>
-        <input type="password" id="pass-repetir" class="input-movil" placeholder="Ingrese nueva contraseña">
+        <input type="password" id="pass-repetir" class="input-movil" placeholder="Ingrese nueva contraseña" required>
       </div>
 
       <div class="formulario-der">
         <p><strong>Método de pago</strong></p>
-        <label><input type="radio" name="metodo"> Tarjeta de debito</label>
+        <label><input type="radio" name="metodo" required> Tarjeta de debito</label>
         <div class="grupo-tarjeta">
-          <input type="text" placeholder="Número de tarjeta" class="input-peq input-movil">
-          <input type="text" placeholder="XXX" class="input-code input-movil">
+          <input type="text" placeholder="Número de tarjeta" class="input-peq input-movil" required>
+          <input type="text" placeholder="XXX" class="input-code input-movil" required>
         </div>
-        <label><input type="radio" name="metodo"> Cupón de pago</label>
+        <label><input type="radio" name="metodo" required> Cupón de pago</label>
         <label><input type="checkbox" checked> Pago fácil</label>
         <label><input type="checkbox"> RapiPago</label>
 
-        <label><input type="radio" name="metodo"> Transferencia bancaria</label>
+        <label><input type="radio" name="metodo" required> Transferencia bancaria</label>
         <p>CBU: 2183909411100018971375</p>
       </div>
     </div>
@@ -81,7 +81,7 @@
             <section class="Menu">
                 <h5>MENÚ</h3>
                     <ul class="menu-list">
-                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="index.html">Home</a></li>
                         <li><a href="../vistas/vista_series.html">Series</a></li>
                         <li><a href="../vistas/vista_peliculas.html">Películas</a></li>
                         <li><a href="../vistas/vista_perfil.html">Perfil</a></li>
