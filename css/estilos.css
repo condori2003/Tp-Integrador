@@ -23,22 +23,22 @@ body {
 /* INICIO NAV*/
 .logo-nav-container {
     display: flex;
-    align-items: center;
     padding: 10px;
     background-color: black;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .menu ul {
     display: flex;
     list-style: none;
     text-decoration: none;
-    padding-top: 10px;
+    margin-right: 10px;
 }
 
 .menu li {
-    padding-right: 20px;
+    padding: 0px 5px;
 }
-
 .menu a {
     color: white;
     font-family: Arial, Helvetica, sans-serif;
@@ -117,6 +117,7 @@ a:hover {
 }
 
 .Cartelera h2 {
+  text-align: center;
     margin-left: 30px;
     padding-top: 30px;
 }
@@ -228,7 +229,7 @@ hr {
 .video {
   width: 500px;
   display: flex;
-  align-items: center;
+  align-items: center;     
   justify-content: center;
 }
 .video-trailer {
@@ -629,10 +630,10 @@ hr {
     height: 25px;
   }
 
-  .card-img{
+  /* .card-img{
     width: 120px;
     height: 100px;
-  }
+  } */
 
   .card-img-hero{
     width: 300px;
@@ -655,12 +656,22 @@ hr {
   }
 
 }
-
+/* Medidas menor a 480px  Celular*/
 @media (max-width: 480px) {
  iframe{
   width: 300px; 
   height: 200px;
-}
+  }
+  .card{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .card-img{
+    width: 100%;
+    height: auto;
+    padding: 0px 1em;
+  }
 }
 
 /* Teléfonos grandes (≥576px) */
@@ -687,7 +698,6 @@ hr {
     width: 180px;
     height: 120px;
   }
-
 
 }
 
@@ -747,10 +757,10 @@ hr {
     height: 25px;
   }
 
-  .card-img{
+  /* .card-img{
     width: 120px;
     height: 100px;
-  }
+  } */
 
   .img-detallada{
     width: 300px;
