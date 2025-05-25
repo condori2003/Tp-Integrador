@@ -60,7 +60,7 @@ a:hover {
 /* IMAGEN HERO*/
 .eventos-top {
     color: white;
-    background-image: url(/assets/fondo3.jpg);
+    background-image: url(../assets/fondo3.jpg);
     width: 100%;
     text-align: center;
     background-repeat: no-repeat;
@@ -641,12 +641,12 @@ hr {
   }
 
   .select-categorias{
-    width: 80px;
+    width: 20%;
     height: 30px;
   }
 
   .search{
-     width: 80px;
+    width: 20%;
     height: 30px;
   }
 
@@ -768,12 +768,12 @@ hr {
   }
 
   .select-categorias{
-    width: 80px;
+    width: 20%;
     height: 30px;
   }
 
   .search{
-     width: 80px;
+     width: 10%;
     height: 30px;
   }
 
