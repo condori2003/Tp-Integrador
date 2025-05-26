@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../css/estilos.css" />
+    <link rel="stylesheet" href="css/estilos.css" />
     <title>Pelix - Registro</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
         integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
@@ -12,12 +12,12 @@
 <body>
     <header>
         <div class="logo-nav-container">
-            <a href="../vista_login.html">
-                <img src="../assets/logo.png" alt="Logo" class="logo" />
+            <a href="index.html">
+                <img src="assets/logo.png" alt="Logo" class="logo" />
             </a>
         </div>
     </header>
-    <form class="main_registro" action="../vista_login.html" method="post">
+    <form class="main_registro" action="index.html" method="post">
         <section class="form_registro" >
             <h2>Registrarse</h2>
             <div class="input_field">
@@ -53,8 +53,8 @@
                     <label class="titulo">Tarjeta de debito</label>
                 </div>
                 <div class="input_Tarjeta"> 
-                    <input type="number" name="number" class="box_tarjeta" placeholder="Numero de tarjeta" oninput="this.value = this.value.slice(0, 16)" required> 
-                    <input type="number" name="number" class="box_clave" oninput="this.value = this.value.slice(0, 3)" placeholder="X X X" required>
+                    <input type="number" name="number" class="box_tarjeta" placeholder="Numero de tarjeta" oninput="this.value = this.value.slice(0, 16)"> 
+                    <input type="number" name="number" class="box_clave" oninput="this.value = this.value.slice(0, 3)" placeholder="X X X">
                 </div>
                 <div class="input_radio"> 
                     <input type="radio" name="radio" class="radio" required> 
@@ -70,11 +70,11 @@
                 </div>
                 <div class="input_field">
                     <label>CBU</label>
-                    <p>1234567890123456789012</p>
+                    <p>2183909411100018971375</p>
                 </div>
                 <div class="input_field_btns">
                     <input type="submit" value="Confirmar" class="btn">
-                    <a href="../vista_login.html" class="btn">Cancelar</a>
+                    <a href="index.html" class="btn">Cancelar</a>
                 </div>
             </div>
         </section>
