@@ -14,41 +14,65 @@
 <body class="body-peliculas">
     <header>
         <div class="logo-nav-container">
-            <a href="../index.html">
+            <a href="../vista_principal.html">
                 <img src="../assets/logo.png" alt="Logo" class="logo" />
             </a>
             <nav class="menu">
                 <ul>
-                  <li><a href="../index.html">Home</a></li>
-                    <li><a href="../vistas/vista_series.html">Series</a></li>
-                    <li><a href="../vistas/vista_peliculas.html">Películas</a></li>
-                    <li><a href="../vistas/vista_perfil.html">Perfil</a></li>
+                    <li><a href="../vista_principal.html">Home</a></li>
+                    <li><a href="../vista_series.html">Series</a></li>
+                    <li><a href="../vista_peliculas.html">Películas</a></li>
+                    <li><a href="../vista_perfil.html">Perfil</a></li>
+                    <li><a href="../index.html">Salir</a></li>
                 </ul>
             </nav>
         </div>
     </header>
     <div class="container-pelicula">
-        <div class="detalle-body">
-            <div class="img-boton">
-                <img src="../assets/LluviaDeHamburguesas2.webp" alt="LluviaDeHamburguesas2" class="img-detallada"
-                    width="540px" height="320px">
-                <a href="https://youtu.be/67mWn9P5j_Y?si=sHsP_EjAnjompfaH" target="_blank"> <button class="boton-comenzar">Comenzar</button></a>
-
+        <div class="video">
+            <iframe width="500" height="280" src="https://www.youtube.com/embed/67mWn9P5j_Y?si=aj79ee7bWh6kXdin" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <div class="descripcion">
+            <div class="descripcion-texto">
+                <label for="titulo">Título: Lluvia de Hamburguesas 2</label>
             </div>
-            <div class="descripcion">
-                <h1>Lluvia de Hamburguesas 2</h1>
-                <p>Flint Lockwood descubre que su máquina más famosa ahora está creando híbridos entre alimentos y
-                    animales y, junto con sus amigos, se lanzan a la aventura de salvar al mundo de estas extrañas
-                    criaturas.</p>
+            <div class="descripcion-texto">
+                <label for="Duracion">Duracion: 1h 36min</label>
+            </div>
+            <div class="descripcion-texto">
+                <label for="Genero">Genero: Infantil/Comedia</label>
+            </div> 
+            <div class="discripcion-texto">
+                <label for="Actores">Actores:</label>
+                <label for="Nombres">
+                    <a href="https://es.wikipedia.org/wiki/Will_Forte" class="enlace-actor">Will Forte</a>
+                    <a href="https://es.wikipedia.org/wiki/Bill_Hader" class="enlace-actor">Bill Hader</a>
+                    <a href="https://es.wikipedia.org/wiki/Kristen_Schaal" class="enlace-actor">Kristen Schaal</a>
+                    <a href="https://es.wikipedia.org/wiki/Anna_Faris" class="enlace-actor">Anna Faris</a>
+                    <a href="https://es.wikipedia.org/wiki/Terry_Crews" class="enlace-actor">Terry Crews</a>
+                    <a href="https://es.wikipedia.org/wiki/Andy_Samberg" class="enlace-actor">Andy Samberg</a>
+                </label>
+            </div><br>
+            <div class="descripcion-texto">
+                <label for="Resumen">Flint Lockwood descubre que su máquina más famosa ahora está creando híbridos entre alimentos y animales y, junto con sus amigos, se lanzan a la aventura de salvar al mundo de estas extrañas criaturas.</label>
+            </div>
+            <div class="descripcion-texto">           
+                <a href="https://www.youtube.com/embed/67mWn9P5j_Y?si=aj79ee7bWh6kXdin" target="_blank" class="btn boton-comenzar">Comenzar</a>
             </div>
         </div>
-
     </div>
     <main class="peliculas-similares">
         <h2>Peliculas Similares</h2>
         <br>
         <div class="container-cards">
-
+            <div class="card">
+                <a href="../vista_peliculas.html">
+                    <img src="../assets/shrek.jpg" alt="Shrek" class="card-img">
+                    <div class="card-body">
+                        <h5 class="card-title">Shrek</h5>
+                    </div>
+                </a>
+            </div>
            <div class="card">
                 <a href="../vistas/vista_peliculas.html">
                     <img src="../assets/img-shrek2.jpg" alt="shrek2" class="card-img" width="320px" height="200px">
@@ -105,10 +129,10 @@
             <section class="Menu">
                 <h5>MENÚ</h3>
                     <ul class="menu-list">
-                        <li><a href="../index.html">Home</a></li>
-                        <li><a href="../vistas/vista_series.html">Series</a></li>
-                        <li><a href="../vistas/vista_peliculas.html">Películas</a></li>
-                        <li><a href="../vistas/vista_perfil.html">Perfil</a></li>
+                       <li><a href="../vista_principal.html">Home</a></li>
+                        <li><a href="../vista_series.html">Series</a></li>
+                        <li><a href="../vista_peliculas.html">Películas</a></li>
+                        <li><a href="../vista_perfil.html">Perfil</a></li>
 
                     </ul>
             </section>

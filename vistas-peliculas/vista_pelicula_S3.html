@@ -14,44 +14,67 @@
 <body class="body-peliculas">
     <header>
         <div class="logo-nav-container">
-            <a href="../index.html">
+            <a href="../vista_principal.html">
                 <img src="../assets/logo.png" alt="Logo" class="logo" />
             </a>
             <nav class="menu">
                 <ul>
-                    <li><a href="../index.html">Home</a></li>
-                    <li><a href="../vistas/vista_series.html">Series</a></li>
-                    <li><a href="../vistas/vista_peliculas.html">Películas</a></li>
-                    <li><a href="../vistas/vista_perfil.html">Perfil</a></li>
+                    <li><a href="../vista_principal.html">Home</a></li>
+                    <li><a href="../vista_series.html">Series</a></li>
+                    <li><a href="../vista_peliculas.html">Películas</a></li>
+                    <li><a href="../vista_perfil.html">Perfil</a></li>
+                    <li><a href="../index.html">Salir</a></li>
                 </ul>
             </nav>
         </div>
     </header>
     <div class="container-pelicula">
-        <div class="detalle-body">
-            <div class="img-boton">
-                <img src="..//assets/Shrek3.webp" alt="ShrekTercero" class="img-detallada" width="540px" height="320px">
-                <a href="https://youtu.be/MuUwZD2cb4A?si=PzkJx2SB8pILXev1" target="_blank"> <button
-                        class="boton-comenzar">Comenzar</button></a>
-
+        <div class="video">
+            <iframe width="500" height="280" src="https://www.youtube.com/embed/WFQ-ZXAhTos?si=5z7VcX5-Vm_RJA7K" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <div class="descripcion">
+            <div class="descripcion-texto">
+                <label for="titulo">Título: Shrek Tercero</label>
             </div>
-            <div class="descripcion">
-                <h1>Shrek Tercero</h1>
-                <p>Shrek se casó con Fiona, pero lo que no tuvo en cuenta es que al casarse con una princesa... tarde o
-                    temprano uno termina siendo rey. Cuando su suegro, el Rey Harold, cae enfermo, Shrek se encuentra en
-                    riesgo de tener que abandonar su amado pantano por el trono. A menos claro que encuentre un
-                    heredero.</p>
+            <div class="descripcion-texto">
+                <label for="Duracion">Duracion: 1h 33min</label>
+            </div>
+            <div class="descripcion-texto">
+                <label for="Genero">Genero: Infantil/Comedia</label>
+            </div> 
+            <div class="discripcion-texto">
+                <label for="Actores">Actores:</label>
+                <label for="Nombres">
+                    <a href="https://es.wikipedia.org/wiki/Mike_Myers" class="enlace-actor">Mike Myers</a>
+                    <a href="https://es.wikipedia.org/wiki/Eddie_Murphy" class="enlace-actor">Eddie Murphy</a>
+                    <a href="https://es.wikipedia.org/wiki/Antonio_Banderas" class="enlace-actor">Antonio Banderas</a>
+                    <a href="https://es.wikipedia.org/wiki/Cameron_Diaz" class="enlace-actor">Cameron Diaz</a>
+                    <a href="https://es.wikipedia.org/wiki/Justin_Timberlake" class="enlace-actor">Justin Timberlake</a>
+                    <a href="https://es.wikipedia.org/wiki/Rupert_Everett" class="enlace-actor">Rupert Everett</a>
+                </label>
+            </div><br>
+            <div class="descripcion-texto">
+                <label for="Resumen">Cuando el Rey Harold enferma, Shrek y la Princesa Fiona descubren que tendrán que dirigir la Tierra Muy Muy Lejana a menos que puedan encontrar al Príncipe Artie, el verdadero heredero, y llevarlo a casa. Desafortunadamente, no tiene interés en ser rey; no obstante, Shrek, Burro y el Gato con Botas planean recuperarlo. Mientras tanto, la Princesa Fiona le pide ayuda a sus compañeras heroínas para alejar del trono al Príncipe Encantador.</label>
+            </div>
+            <div class="descripcion-texto">           
+                <a href="https://www.youtube.com/embed/WFQ-ZXAhTos?si=5z7VcX5-Vm_RJA7K" target="_blank" class="btn boton-comenzar">Comenzar</a>
             </div>
         </div>
-
     </div>
     <main class="peliculas-similares">
         <h2>Peliculas Similares</h2>
         <br>
         <div class="container-cards">
-
             <div class="card">
-                <a href="../vistas/vista_peliculas.html">
+                <a href="../vista_peliculas.html">
+                    <img src="../assets/shrek.jpg" alt="Shrek" class="card-img">
+                    <div class="card-body">
+                        <h5 class="card-title">Shrek</h5>
+                    </div>
+                </a>
+            </div>
+            <div class="card">
+                <a href="../vista_peliculas.html">
                     <img src="../assets/img-shrek2.jpg" alt="shrek2" class="card-img" width="320px" height="200px">
                     <div class="card-body">
                         <h5 class="card-title">Shrek 2</h5>
@@ -105,11 +128,11 @@
 
             <section class="Menu">
                 <h5>MENÚ</h5>
-                    <ul>
-                    <li><a href="../index.html">Home</a></li>
-                        <li><a href="../vistas/vista_series.html">Series</a></li>
-                        <li><a href="../vistas/vista_peliculas.html">Películas</a></li>
-                        <li><a href="../vistas/vista_perfil.html">Perfil</a></li>
+                <ul class="menu-list">
+                        <li><a href="../vista_principal.html">Home</a></li>
+                        <li><a href="../vista_series.html">Series</a></li>
+                        <li><a href="../vista_peliculas.html">Películas</a></li>
+                        <li><a href="../vista_perfil.html">Perfil</a></li>
                 </ul>
             </section>
 

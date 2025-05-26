@@ -14,50 +14,76 @@
 <body class="body-peliculas">
     <header>
         <div class="logo-nav-container">
-            <a href="../index.html">
+            <a href="../vista_principal.html">
                 <img src="../assets/logo.png" alt="Logo" class="logo" />
             </a>
             <nav class="menu">
                 <ul>
-                    <li><a href="../index.html">Home</a></li>
-                    <li><a href="../vistas/vista_series.html">Series</a></li>
-                    <li><a href="../vistas/vista_peliculas.html">Películas</a></li>
-                    <li><a href="../vistas/vista_perfil.html">Perfil</a></li>
+                    <li><a href="../vista_principal.html">Home</a></li>
+                    <li><a href="../vista_series.html">Series</a></li>
+                    <li><a href="../vista_peliculas.html">Películas</a></li>
+                    <li><a href="../vista_perfil.html">Perfil</a></li>
+                    <li><a href="../index.html">Salir</a></li>
                 </ul>
             </nav>
         </div>
     </header>
     <div class="container-pelicula">
-        <div class="detalle-body">
-            <div class="img-boton">
-                <img src="../assets/BetterCallSaul.png" alt="BetterCallSaul" class="img-detallada" width="540px"
-                    height="320px">
-                <a href="https://youtu.be/HN4oydykJFc?si=Rx1CK1T69-2_3cRG" target="_blank"> <button
-                        class="boton-comenzar">Comenzar</button></a>
-
+        <div class="video">
+            <iframe width="500" height="280" src="https://www.youtube.com/embed/jtJRfdao_RY?si=sfMuH3DU1aUZkjwd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <div class="descripcion">
+            <div class="descripcion-texto">
+                <label for="titulo">Título: Better Call Saul</label>
             </div>
-            <div class="descripcion">
-                <h1>Better Call Saul</h1>
-                <p>Ambientada en 2002, seis años antes de los acontecimientos relatadas en Breaking Bad, Better Call
-                    Saul es un spin-off centrado en el personaje de James 'Jimmy' McGuill (Bob Odenkirk), antes de que
-                    asuma la identidad de Saul Goodman, un abogado corrupto con un humor políticamente incorrecto
-                    vinculado al mundo criminal que empieza a crear una importante red de contactos en los bajos mundos.
-                </p>
+            <div class="descripcion-texto">
+                <label for="Temporada">Temporadas: </label>
+                <select name="Temporadas" id="Temporadas">
+                    <option>Seleccionar</option>
+                    <option value="1">Temporada 1</option>
+                    <option value="2">Temporada 2</option>
+                    <option value="3">Temporada 3</option>
+                    <option value="4">Temporada 4</option>
+                    <option value="5">Temporada 5</option>
+                    <option value="6">Temporada 6</option>
+                </select>
+                <label for="Capitulo">Capitulo: </label>
+                <select name="Capitulo" id="Capitulo">
+                    <option>Capitulo</option>
+                    <option value="1">Capitulo 1</option>
+                    <option value="2">Capitulo 2</option>
+                    <option value="3">Capitulo 3</option>
+                    <option value="4">Capitulo 4</option>
+                    <option value="5">Capitulo 5</option>
+                    <option value="6">Capitulo 6</option>
+                    <option value="7">Capitulo 7</option>
+                    <option value="8">Capitulo 8</option>
+                    <option value="9">Capitulo 9</option>
+                    <option value="10">Capitulo 10</option>
+                </select>
+            </div>
+            <div class="descripcion-texto">
+                <label for="Genero">Genero: Drama</label>
+            </div> 
+            <div class="discripcion-texto">
+                <label for="Actores">Actores:</label>
+                <label for="Nombres">
+                    <a href="https://es.wikipedia.org/wiki/Bob_Odenkirk" class="enlace-actor">Bob Odenkirk</a>
+                    <a href="https://es.wikipedia.org/wiki/Rhea_Seehorn" class="enlace-actor">Rhea Seehorn</a>
+                    <a href="https://es.wikipedia.org/wiki/Jonathan_Banks" class="enlace-actor">Jonathan Banks</a>
+                    <a href="https://es.wikipedia.org/wiki/Michael_Mann" class="enlace-actor">Michael Mann</a>
+                    <a href="https://es.wikipedia.org/wiki/Patrick_Farley" class="enlace-actor">Patrick Farley</a>
+                    <a href="https://es.wikipedia.org/wiki/Giancarlo_Esposito" class="enlace-actor">Giancarlo Esposito</a>
+                    <a href="https://es.wikipedia.org/wiki/Tony_Dalton" class="enlace-actor">Tony Dalton</a>
+                </label>
+            </div><br>
+            <div class="descripcion-texto">
+                <label for="Resumen">"Better Call Saul" es una serie de televisión precuela de "Breaking Bad", que narra la historia de Jimmy McGill (posteriormente conocido como Saul Goodman), un ex estafador que intenta convertirse en un abogado respetable. Se centra en su transformación de un hombre con principios éticos a un abogado penalista egocéntrico y excéntrico, seis años antes de que se involucre en la vida de Walter White. </label>
+            </div>      
+            <div class="descripcion-texto">
+                <a href="https://www.youtube.com/embed/jtJRfdao_RY?si=sfMuH3DU1aUZkjwd" target="_blank" class="btn boton-comenzar">Comenzar</a>
             </div>
         </div>
-    </div>
-    <div class="categorias-container">
-        <p>Temporadas</p>
-        <br />
-        <select class="select-categorias">
-            <option value="1">Temporada 1</option>
-            <option value="2">Temporada 2</option>
-            <option value="3">Temporada 3</option>
-            <option value="4">Temporada 4</option>
-            <option value="5">Temporada 5</option>
-            <option value="6">Temporada 6</option>
-        </select>
-        <br />
     </div>
     <main class="peliculas-similares">
         <h2>Series Similares</h2>
@@ -65,7 +91,7 @@
         <div class="container-cards">
 
             <div class="card">
-                <a href="../vistas/vista_series.html">
+                <a href="../vista_series.html">
                     <img src="../assets/El-eternauta.webp" alt="ElEternauta" class="card-img" width="320px"
                         height="200px">
                     <div class="card-body">
@@ -107,6 +133,14 @@
                     <img src="../assets/vampire.Diaries.webp" alt="vampire-Diaries" class="card-img">
                     <div class="card-body">
                         <h5 class="card-title"> The vampire Diaries</h5>
+                    </div>
+                </a>
+            </div>
+            <div class="card">
+                <a href="../vista_series.html">
+                    <img src="../assets/resident.jpg" alt="the resident" class="card-img">
+                    <div class="card-body">
+                        <h5 class="card-title">The Resident</h5>
                     </div>
                 </a>
             </div>

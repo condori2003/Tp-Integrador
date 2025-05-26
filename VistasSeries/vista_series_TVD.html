@@ -14,52 +14,89 @@
 <body class="body-peliculas">
     <header>
         <div class="logo-nav-container">
-            <a href="../index.html">
+            <a href="../vista_principal.html">
                 <img src="../assets/logo.png" alt="Logo" class="logo" />
             </a>
             <nav class="menu">
                 <ul>
-                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../vista_principal.html">Home</a></li>
                     <li><a href="../vista_series.html">Series</a></li>
                     <li><a href="../vista_peliculas.html">Películas</a></li>
-                    <li><a href="../vistas/vista_perfil.html">Perfil</a></li>
+                    <li><a href="../vista_perfil.html">Perfil</a></li>
+                    <li><a href="../index.html">Salir</a></li>
                 </ul>
             </nav>
         </div>
     </header>
     <div class="container-pelicula">
-        <div class="detalle-body">
-            <div class="img-boton">
-                <img src="../assets/vampire.Diaries.webp" alt="TheVampireDiaries" class="img-detallada" width="540px"
-                    height="320px">
-                <a href="https://youtu.be/BmVmhjjkN4E?si=Z7g03_HAGoX65Spz" target="_blank"> <button
-                        class="boton-comenzar">Comenzar</button></a>
-
+        <div class="video">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/RO3Qp_XdR0w?si=cvk9H8MbNu8Wc75f" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <div class="descripcion">
+            <div class="descripcion-texto">
+                <label for="titulo">Título: The Vampire Diares</label>
             </div>
-            <div class="descripcion">
-                <h1>The Vampire Diaries</h1>
-                <p>Creada por Kevin Williamson ('El círculo secreto', 'Scream 4'), esta serie de corte sobrenatural está
-                    basada en una serie de novelas homónimas escritas por L.J. Smith (también autora de la saga de 'The
-                    Secret Circle'). Como protagonista tenemos a Elena Gilbert (Nina Dobrev, 'Arena'), una joven de 17
-                    años que trata de seguir adelante con su vida tras la pérdida de sus padres en un trágico accidente.
-                </p>
+            <div class="descripcion-texto">
+                <label for="Temporada">Temporadas: </label>
+                <select name="Temporadas" id="Temporadas">
+                    <option>Seleccionar</option>
+                    <option value="1">Temporada 1</option>
+                    <option value="2">Temporada 2</option>
+                    <option value="3">Temporada 3</option>
+                    <option value="4">Temporada 4</option>
+                    <option value="5">Temporada 5</option>
+                    <option value="6">Temporada 6</option>
+                    <option value="7">Temporada 7</option>
+                    <option value="8">Temporada 8</option>
+                </select>
+                <label for="Capitulo">Capitulo: </label>
+                <select name="Capitulo" id="Capitulo">
+                    <option>Capitulo</option>
+                    <option value="1">Capitulo 1</option>
+                    <option value="2">Capitulo 2</option>
+                    <option value="3">Capitulo 3</option>
+                    <option value="4">Capitulo 4</option>
+                    <option value="5">Capitulo 5</option>
+                    <option value="6">Capitulo 6</option>
+                    <option value="7">Capitulo 7</option>
+                    <option value="8">Capitulo 8</option>
+                    <option value="9">Capitulo 9</option>
+                    <option value="10">Capitulo 10</option>
+                    <option value="11">Capitulo 11</option>
+                    <option value="12">Capitulo 12</option>
+                    <option value="13">Capitulo 13</option>
+                    <option value="14">Capitulo 14</option>
+                    <option value="15">Capitulo 15</option>
+                    <option value="16">Capitulo 16</option>
+                    <option value="17">Capitulo 17</option>
+                    <option value="18">Capitulo 18</option>
+                    <option value="19">Capitulo 19</option>
+                    <option value="20">Capitulo 20</option>
+                    <option value="21">Capitulo 21</option>
+                    <option value="22">Capitulo 22</option>
+                </select>
+            </div>
+            <div class="descripcion-texto">
+                <label for="Genero">Genero: Drama</label>
+            </div> 
+            <div class="discripcion-texto">
+                <label for="Actores">Actores:</label>
+                <label for="Nombres">
+                    <a href="https://es.wikipedia.org/wiki/Ian_Somerhalder" class="enlace-actor">Ian Somerhalder</a>
+                    <a href="https://es.wikipedia.org/wiki/Nina_Dobrev" class="enlace-actor">Nina Dobrev</a>
+                    <a href="https://es.wikipedia.org/wiki/Paul_Wesley" class="enlace-actor">Paul Wesley</a>
+                    <a href="https://es.wikipedia.org/wiki/Candice_Accola" class="enlace-actor">Candice Accola</a>
+                    <a href="https://es.wikipedia.org/wiki/Kat_Graham" class="enlace-actor">Kat Graham</a>
+                    <a href="https://es.wikipedia.org/wiki/Zach_Roerig" class="enlace-actor">Zach Roerig</a>
+                </label>
+            </div><br>
+            <div class="descripcion-texto">
+                <label for="Resumen">"The Vampire Diaries" (Diarios de Vampiros) es una serie de televisión que sigue la vida de Elena Gilbert, una adolescente que se enamora de dos hermanos vampiros: Stefan y Damon Salvatore. La serie se centra en la lucha de Elena y sus amigos contra las amenazas sobrenaturales en su ciudad natal, Mystic Falls, incluyendo vampiros, hombres lobo, brujas y otros seres mágicos. </label>
+            </div>      
+            <div class="descripcion-texto">
+                <a href="https://www.youtube.com/watch?v=RO3Qp_XdR0w&ab_channel=MusicFase" target="_blank" class="btn boton-comenzar">Comenzar</a>
             </div>
         </div>
-    </div>
-    <div class="categorias-container">
-        <p>Temporadas</p>
-        <br />
-        <select class="select-categorias">
-            <option value="1">Temporada 1</option>
-            <option value="2">Temporada 2</option>
-            <option value="3">Temporada 3</option>
-            <option value="4">Temporada 4</option>
-            <option value="5">Temporada 5</option>
-            <option value="6">Temporada 6</option>
-            <option value="7">Temporada 7</option>
-            <option value="8">Temporada 8</option>
-        </select>
-        <br />
     </div>
     <main class="peliculas-similares">
         <h2>Series Similares</h2>
@@ -67,7 +104,7 @@
         <div class="container-cards">
 
             <div class="card">
-                <a href="../vistas/vista_series.html">
+                <a href="../vista_series.html">
                     <img src="../assets/El-eternauta.webp" alt="ElEternauta" class="card-img" width="320px"
                         height="200px">
                     <div class="card-body">
@@ -112,6 +149,14 @@
                     </div>
                 </a>
             </div>
+            <div class="card">
+                <a href="../vista_series.html">
+                    <img src="../assets/resident.jpg" alt="the resident" class="card-img">
+                    <div class="card-body">
+                        <h5 class="card-title">The Resident</h5>
+                    </div>
+                </a>
+            </div>
         </div>
 
     </main>
@@ -124,10 +169,10 @@
             <section class="Menu">
                 <h5>MENÚ</h3>
                     <ul>
-                        <li><a href="../index.html">Home</a></li>
-                        <li><a href="../vistas/vista_series.html">Series</a></li>
-                        <li><a href="../vistas/vista_peliculas.html">Películas</a></li>
-                        <li><a href="../vistas/vista_perfil.html">Perfil</a></li>
+                        <li><a href="../vista_principal.html">Home</a></li>
+                        <li><a href="../vista_series.html">Series</a></li>
+                        <li><a href="../vista_peliculas.html">Películas</a></li>
+                        <li><a href="../vista_perfil.html">Perfil</a></li>
                     </ul>
             </section>
 

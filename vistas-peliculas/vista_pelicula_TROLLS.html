@@ -14,44 +14,67 @@
 <body class="body-peliculas">
     <header>
         <div class="logo-nav-container">
-            <a href="../index.html">
+            <a href="../vista_principal.html">
                 <img src="../assets/logo.png" alt="Logo" class="logo" />
             </a>
             <nav class="menu">
                 <ul>
-<li><a href="../index.html">Home</a></li>
-                    <li><a href="../vistas/vista_series.html">Series</a></li>
-                    <li><a href="../vistas/vista_peliculas.html">Películas</a></li>
-                    <li><a href="../vistas/vista_perfil.html">Perfil</a></li>
+                    <li><a href="../vista_principal.html">Home</a></li>
+                    <li><a href="../vista_series.html">Series</a></li>
+                    <li><a href="../vista_peliculas.html">Películas</a></li>
+                    <li><a href="../vista_perfil.html">Perfil</a></li>
+                    <li><a href="../index.html">Salir</a></li>
                 </ul>
             </nav>
         </div>
     </header>
     <div class="container-pelicula">
-        <div class="detalle-body">
-            <div class="img-boton">
-                <img src="../assets/Trolls.webp" alt="Trolls" class="img-detallada" width="540px" height="320px">
-                <a href="https://youtu.be/4uwvSgoxwRo?si=xL0Ipmh4k-Zgurxi" target="_blank"> <button
-                        class="boton-comenzar">Comenzar</button></a>
-
+        <div class="video">
+            <iframe width="500" height="280" src="https://www.youtube.com/embed/4uwvSgoxwRo?si=zLYlO0-iWqhaj5H2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <div class="descripcion">
+            <div class="descripcion-texto">
+                <label for="titulo">Título: Trolls</label>
             </div>
-            <div class="descripcion">
-                <h1>Trolls</h1>
-                <p>Conocidos por sus pelos de colores, locos y mágicos, los Trolls son las criaturas más felices y
-                    alegres que irrumpen en el mundo de la canción. Pero su mundo de arco iris y cupcakes cambiará para
-                    siempre cuando su líder Poppy debe embarcarse en una misión de rescate que la
-                    llevará muy lejos del único mundo que siempre ha conocido.</p>
+            <div class="descripcion-texto">
+                <label for="Duracion">Duracion: 1h 32min</label>
+            </div>
+            <div class="descripcion-texto">
+                <label for="Genero">Genero: Infantil/Comedia</label>
+            </div> 
+            <div class="discripcion-texto">
+                <label for="Actores">Actores:</label>
+                <label for="Nombres">
+                    <a href="https://es.wikipedia.org/wiki/Anna_Kendrick" class="enlace-actor">Anna Kendrick</a>
+                    <a href="https://es.wikipedia.org/wiki/Zooey_Deschanel" class="enlace-actor">Zooey Deschanel</a>
+                    <a href="https://es.wikipedia.org/wiki/Justin_Timberlake" class="enlace-actor">Justin Timberlake</a>
+                    <a href="https://es.wikipedia.org/wiki/Christine_Baranski" class="enlace-actor">Christine Baranski</a>
+                    <a href="https://es.wikipedia.org/wiki/Gwn_Stefani" class="enlace-actor">Gwen Stefani</a>
+                    <a href="https://es.wikipedia.org/wiki/Kunnal_Nayyar" class="enlace-actor">Kunnal Nayyar</a>
+                </label>
+            </div><br>
+            <div class="descripcion-texto">
+                <label for="Resumen">Conocidos por sus pelos de colores locos, los Trolls son las criaturas más felices que irrumpen en el mundo de la canción. Su mundo de arco iris y "cupcakes" se pondrá patas arriba cuando Poppy, la Troll más feliz del mundo, y Branch, el más cauteloso, se embarquen en una aventura para rescatar a sus amigos.</label>
+            </div>
+            <div class="descripcion-texto">           
+                <a href="https://www.youtube.com/embed/4uwvSgoxwRo?si=zLYlO0-iWqhaj5H2" target="_blank" class="btn boton-comenzar">Comenzar</a>
             </div>
         </div>
-
     </div>
     <main class="peliculas-similares">
         <h2>Peliculas Similares</h2>
         <br>
         <div class="container-cards">
-
             <div class="card">
-                <a href="../vistas/vista_peliculas.html">
+                <a href="../vista_peliculas.html">
+                    <img src="../assets/shrek.jpg" alt="Shrek" class="card-img">
+                    <div class="card-body">
+                        <h5 class="card-title">Shrek</h5>
+                    </div>
+                </a>
+            </div>
+            <div class="card">
+                <a href="../vista_peliculas.html">
                     <img src="../assets/img-shrek2.jpg" alt="shrek2" class="card-img" width="320px" height="200px">
                     <div class="card-body">
                         <h5 class="card-title">Shrek 2</h5>
@@ -106,10 +129,10 @@
             <section class="Menu">
                 <h5>MENÚ</h3>
                     <ul class="menu-list">
-                        <li><a href="../index.html">Home</a></li>
-                        <li><a href="../vistas/vista_series.html">Series</a></li>
-                        <li><a href="../vistas/vista_peliculas.html">Películas</a></li>
-                        <li><a href="../vistas/vista_perfil.html">Perfil</a></li>
+                        <li><a href="../vista_principal.html">Home</a></li>
+                        <li><a href="../vista_series.html">Series</a></li>
+                        <li><a href="../vista_peliculas.html">Películas</a></li>
+                        <li><a href="../vista_perfil.html">Perfil</a></li>
                     </ul>
             </section>
 
