@@ -377,25 +377,7 @@ hr {
     margin-top: 20px;
   }
   
-  .btn-verde {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    font-weight: bold;
-    border-radius: 5px;
-    cursor: pointer;
-  }
   
-  .btn-rojo {
-    background-color: #f44336;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    font-weight: bold;
-    border-radius: 5px;
-    cursor: pointer;
-  }
   
 /* FIN VISTA PERFIL*/
 
@@ -547,6 +529,30 @@ hr {
 .bottom{
     justify-content: center;
 }
+
+.btn-verde {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .btn-verde:hover {
+    background-color: #3e8e41;
+  }
+  
+  .btn-rojo {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .btn-rojo:hover {
+    background-color: #b71c1c;
+  }
 /* FIN VISTA REGISTRO*/
 
 /*INICIO FOOTER */

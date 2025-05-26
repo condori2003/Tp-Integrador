@@ -29,7 +29,7 @@
     </div>
   </header>
 
-  <form action="menu_principal.html" method="post" class="perfil-container">
+  <form action="vista_principal.html" method="get" class="perfil-container">
     <div class="perfil-usuario">
       <img
         src="assets/icono-perfil-usuario-estilo-plano-ilustracion-vector-avatar-miembro-sobre-fondo-aislado-concepto-negocio-signo-permiso-humano_157943-15752.avif"
@@ -55,8 +55,8 @@
         <p><strong>Método de pago</strong></p>
         <label><input type="radio" name="metodo" required> Tarjeta de debito</label>
         <div class="grupo-tarjeta">
-          <input type="text" placeholder="Número de tarjeta" class="input-peq input-movil" required>
-          <input type="text" placeholder="XXX" class="input-code input-movil" required>
+          <input type="text" placeholder="Número de tarjeta" class="input-peq input-movil">
+          <input type="text" placeholder="XXX" class="input-code input-movil">
         </div>
         <label><input type="radio" name="metodo" required> Cupón de pago</label>
         <label><input type="checkbox" checked> Pago fácil</label>
@@ -68,8 +68,8 @@
     </div>
 
     <div class="perfil-botones">
-      <button class="btn-verde">Guardar cambios</button>
-      <input type="reset" value="Cancelar subscripción" class="btn-rojo">
+      <button class="btn btn-verde">Guardar cambios</button>
+      <a href="index.html" class="btn btn-rojo">Cancelar subscripción</a>
     </div>
   </form>
 
