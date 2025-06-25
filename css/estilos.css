@@ -517,6 +517,12 @@ hr {
     color: white;
 }
 
+.btn:disabled {
+  background-color: #6c757d;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
 .input_field_btns{
     display: flex;
     margin-top: 30px;
@@ -555,7 +561,13 @@ hr {
     background-color: #b71c1c;
   }
 /* FIN VISTA REGISTRO*/
-
+ /*Mensaje de error*/
+  .error-message {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+    display: none;
+  }
 /*INICIO FOOTER */
 
 .footer-container {
@@ -895,4 +907,6 @@ hr {
         width: 100%;
     }
   }
+
+ 
   /* FIN LOGIN RESPONSIVE  */
