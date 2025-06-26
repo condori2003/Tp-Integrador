@@ -31,19 +31,20 @@
         <form class="form_registro" action="./vista_principal.html" method="get">
             <div class="input_field">
                 <label for="username">Nombre de usuario</label>
-                <input type="text" id="usaurio" name="usario" placeholder="Nombre de usuario">
+                <input type="text" id="usaurio" name="usario" placeholder="Nombre de usuario" required>
             </div>
             <div class="input_field">
                 <label for="password">Contraseña</label>
-                <input type="password" name="password" placeholder="Contraseña">
+                <input type="password" name="password" placeholder="Contraseña" required>
             </div>
             <div class="input_field bottom">
-                <input type="submit" value="iniciar sesión" class="btn">
+                <input type="submit" value="iniciar sesión" class="btn" id="btnLogin" >
             </div>
             <a href="vista_recuperar.html" class="enlace">¿Olvidaste contraseña?</a>
             <a href="vista_registro.html" class="enlace">Registrarse</a>
         </form>
     </section>
+    <script src="JS/login.js"></script>
 </body>
 
 </html>
