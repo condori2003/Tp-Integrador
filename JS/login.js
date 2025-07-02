@@ -1,48 +1,51 @@
-let usuariosRegistrados=[];
-
-if(localStorage.getItem("listasDeUsuarios")!=null){
-    usuariosRegistrados=JSON.parse(localStorage.getItem("listasDeUsuarios"));
+const usuario = document.getElementById("usuario");
+const password = document.getElementById("password");
+const loginButton = document.getElementById("btn-login");
+const form = document.getElementById("form_registro");
+document.getElementById('error-mensaje').style.display = "none";
+function checkInputs() {
+  if (usuario.value.trim() !== '' && password.value.trim() !== '') {
+    loginButton.disabled = false;
+  } else {
+    loginButton.disabled = true;
+  }
 }
 
-const usuarioInput = document.getElementById('usuario');
-const contrasenaInput = document.getElementById('contrasena');
-const btnLogin = document.getElementById('btnLogin');
+usuario.addEventListener('input', checkInputs);
+password.addEventListener('input', checkInputs);
 
- // Función para validar campos y habilitar/deshabilitar botón
-function validateFields() {
-    const username = usuarioInput.value.trim();
-    const password = contrasenaInput.value.trim();
-    //.trim() elimina espacios en blanco al principio y final
-    if (username && password) {
-        btnLogin.disabled = false;
-    } else {
-        btnLogin.disabled = true;
-    }
-}
+form.addEventListener('submit', function(e) {
+  e.preventDefault();
+  const usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
+  const encontrado = usuarios.find(
+    u => u.usuario === usuario.value && u.password === password.value
+  );
+  if (encontrado) {
+    // Guarda el usuario activo (solo el nombre de usuario)
+    localStorage.setItem("usuarioActivo", encontrado.usuario);
+    document.getElementById('error-mensaje').style.display = "block";
+    document.getElementById('error-mensaje').style.color = "white";
+    document.getElementById('error-mensaje').textContent = "¡Inicio de sesión exitoso!";
+    document.getElementById('btn-login').style.backgroundColor = "green";
+    document.getElementById('btn-login').style.color = "white";
 
- // Event listeners para validación en tiempo real
-usuarioInput.addEventListener('input', validateFields);
-contrasenaInput.addEventListener('input', validateFields);
+    setTimeout(() => {
+        window.location.href = "./vista_principal.html"; // Ruta de redirección
+    }, 2000);
 
-// Función para validar usuario
-function validateUser(username, password) {
-    return usuariosRegistrados.some(user => 
-        user.username === username && user.password === password
-    );
-}
+  } else {
+    document.getElementById('error-mensaje').style.display = "block";
+    document.getElementById('error-mensaje').textContent = "Usuario o contraseña incorrectos.";
+  }
+});
 
-
-function login(usuario,password){
-    let usuarios=usuariosRegistrados;
-    if(usuarios.includes(usuario)){
-        if(usuarios[usuario]==password){
-            localStorage.setItem("usuario",usuario);
-            localStorage.setItem("password",password);
-            window.location.href="index.html";
-        }else{
-            alert("Contraseña incorrecta");
-        }
-    }else{
-        alert("Usuario no registrado");
-    }
-}
+// (Opcional) Mostrar el último usuario registrado en el login
+window.addEventListener('DOMContentLoaded', function() {
+  const usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
+  if (usuarios.length > 0) {
+    const ultimo = usuarios[usuarios.length - 1];
+    document.getElementById('info-usuario').innerHTML =
+      `<strong>Último usuario registrado:</strong> ${ultimo.usuario} <br>
+       <strong>Email:</strong> ${ultimo.email}`;
+  }
+});
