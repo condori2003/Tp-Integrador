@@ -39,13 +39,4 @@ form.addEventListener('submit', function(e) {
   }
 });
 
-// (Opcional) Mostrar el último usuario registrado en el login
-window.addEventListener('DOMContentLoaded', function() {
-  const usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
-  if (usuarios.length > 0) {
-    const ultimo = usuarios[usuarios.length - 1];
-    document.getElementById('info-usuario').innerHTML =
-      `<strong>Último usuario registrado:</strong> ${ultimo.usuario} <br>
-       <strong>Email:</strong> ${ultimo.email}`;
-  }
-});
+

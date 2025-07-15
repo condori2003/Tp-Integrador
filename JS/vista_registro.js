@@ -7,6 +7,8 @@ const contrasena = document.getElementById('contrasena');
 const repetirContrasena = document.getElementById('repetir-contrasena');
 const numeroTarjeta = document.getElementById('numero-tarjeta');
 const codigoTarjeta = document.getElementById('codigo-tarjeta');
+const pagoFacil = document.getElementById('pago-facil');
+const rapiPago = document.getElementById('rapi-pago');
 const confirmarBtn = document.getElementById('confirmar');
 const cancelarBtn = document.getElementById('cancelar');
 
@@ -19,6 +21,7 @@ codigoTarjeta.addEventListener('input', function () {
   if (this.value.length > 3) {
     this.value = this.value.slice(0, 3);
   }
+  document.getElementById('error-numero-tarjeta').textContent = "";
 });
 
 // Limitar input de número de tarjeta a 16 dígitos numéricos
@@ -30,10 +33,21 @@ numeroTarjeta.addEventListener('input', function () {
   if (this.value.length > 16) {
     this.value = this.value.slice(0, 16);
     document.getElementById('error-numero-tarjeta').textContent = "Solo se permiten hasta 16 dígitos.";
-  } else {
-    document.getElementById('error-numero-tarjeta').textContent = "";
-  }
+  } 
+  document.getElementById('error-numero-tarjeta').textContent = "";
 });
+// Limitar input de pago
+pagoFacil.addEventListener('change', () => {
+  if (pagoFacil.checked) rapiPago.checked = false 
+  document.getElementById('error-cupon').textContent = "";
+});
+
+rapiPago.addEventListener('change', () => {
+  if (rapiPago.checked) pagoFacil.checked = false
+  document.getElementById('error-cupon').textContent = "";
+
+});
+
 
 // Validaciones regex
 function soloLetras(valor) {
@@ -147,7 +161,18 @@ function validarCampos() {
 
   // Método de pago: solo validar si está seleccionado débito
   const debito = document.getElementById('debito').checked;
-  if (debito) {
+  const cupon = document.getElementById('cupon').checked;
+  const transferencia = document.getElementById('transferencia').checked;
+
+  // Validar campos de pago
+  if (debito===false && cupon===false && transferencia===false) {
+    valido = false;
+    document.getElementById('error-metodo-pago').textContent = "Debe seleccionar al menos un método de pago.";  
+  }
+  // Validar campos de pago debito
+  if (debito === true) {
+    document.getElementById('error-metodo-pago').textContent = "";
+    document.getElementById('error-cupon').textContent = "";
     if (numeroTarjeta.value.trim() === "") {
       document.getElementById('error-numero-tarjeta').textContent = "El número de tarjeta es obligatorio.";
       valido = false;
@@ -166,9 +191,23 @@ function validarCampos() {
     } else {
       document.getElementById('error-codigo-tarjeta').textContent = "";
     }
-  } else {
+  }
+  // Validar campos de pago cupon
+  if (cupon === true) {
+    document.getElementById('error-metodo-pago').textContent = "";
+    document.getElementById('error-codigo-tarjeta').textContent = "";
+    document.getElementById('error-numero-tarjeta').textContent = "";
+    if (pagoFacil.checked === false && rapiPago.checked === false) {
+      valido = false;
+      document.getElementById('error-cupon').textContent = "Debe seleccionar al menos un método de pago.";
+    }
+
+  }
+  if (transferencia === true) {
+    document.getElementById('error-metodo-pago').textContent = "";
     document.getElementById('error-numero-tarjeta').textContent = "";
     document.getElementById('error-codigo-tarjeta').textContent = "";
+    document.getElementById('error-cupon').textContent = "";
   }
 
   // Habilitar o deshabilitar el botón
@@ -177,7 +216,7 @@ function validarCampos() {
 }
 
 // Validar en cada input en tiempo real
-[nombre, apellido, email, usuario, contrasena, repetirContrasena, numeroTarjeta, codigoTarjeta].forEach(input => {
+[nombre, apellido, email, usuario, contrasena, repetirContrasena, numeroTarjeta, codigoTarjeta, pagoFacil, rapiPago].forEach(input => {
   input.addEventListener('input', validarCampos);
 });
 ['debito', 'cupon', 'transferencia'].forEach(id => {
@@ -189,12 +228,20 @@ form.addEventListener('submit', function(e) {
   e.preventDefault();
   if (validarCampos()) {
     const usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
+    if (usuarios.find(u => u.usuario === usuario.value || email.value === u.email)) return alert('Ya existe un usuario con ese email o nombre de usuario.');
+    // Guardar datos del usuario
+    let metodoPago = document.getElementById('debito').checked ? 'tarjeta' : document.getElementById('cupon').checked ? 'cupón' : 'transferencia';
+    let tipoCupon = document.getElementById('pago-facil').checked ? 'pagoFacil' : document.getElementById('rapi-pago').checked ? 'rapiPago' : null;
+    let numeroTarjeta = document.getElementById('debito').checked ? numeroTarjeta.value + " - " +claveTarjeta.value : null;
     usuarios.push({
       usuario: usuario.value,
       password: contrasena.value,
       email: email.value,
       nombre: nombre.value,
-      apellido: apellido.value
+      apellido: apellido.value,
+      metodoPago: metodoPago,
+      numeroTarjeta: numeroTarjeta,
+      tipoCupon: tipoCupon
     });
     localStorage.setItem("usuarios", JSON.stringify(usuarios));
     window.location.href = "index.html"; // Redirige al login

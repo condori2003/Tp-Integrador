@@ -5,12 +5,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/estilos.css" />
-    <title>Pelix - Home</title>
+    <link rel="stylesheet" href="css/vistaPeliculas.css">
+    <link rel="stylesheet" href="css/vistaSeries.css">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
         integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=favorite" />
+    <link rel="stylesheet"  href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=favorite" />
+    <title>Pelix - Home</title>
 </head>
 
 <body class="Home">
@@ -35,14 +37,14 @@
     </header>
 
     <section class="eventos-top" id="top">
-        <div class="img-hero" data-tipo="serie" data-nombre="el eternauta" data-categoria="ciencia-ficcion">
+        <!-- <div class="img-hero" data-tipo="serie" data-nombre="el eternauta" data-categoria="ciencia-ficcion">
             <a href="vista_series.html">
                 <img id="hero" src="assets/El-eternauta.webp" alt="El-eternauta" class="card-img-hero">
                 <div class="card-body-hero">
                     <h5 class="card-title">El Eternauta</h5>
                 </div>
             </a>
-        </div>
+        </div> -->
 
     </section>
 
@@ -68,8 +70,9 @@
     </div>
 
     <main class="Cartelera">
-        <h2 id="tituloSeries">Series más populares</h2>
-        <br>
+        <div class="contenedor-series"></div>
+        <div class="contenedor-peliculas"></div>
+        <!-- <br>
         <div class="container-cards" id="cards">
             <div class="card" data-tipo="serie" data-nombre="dr house" data-categoria="drama">
                 <a href="VistasSeries/vista_series_DrHouse.html">
@@ -134,11 +137,10 @@
                 <button class="favorito-cards"><i class="fa-solid fa-heart"></i></button>
             </div>
 
-        </div>
+        </div> -->
 
-        <h2 id="tituloPeliculas">Peliculas Similares</h2>
-        <br>
-        <div class="container-cards">
+        
+        <!-- <div class="container-cards">
 
             <div class="card" data-tipo="pelicula" data-nombre="lluvia de hamburguesas 2"
                 data-categoria="animadas fantasia comedia">
@@ -203,7 +205,7 @@
                 <button class="favorito-cards"><i class="fa-solid fa-heart"></i></button>
             </div>
 
-        </div>
+        </div> -->
 
     </main>
 
@@ -242,7 +244,11 @@
         </div>
     </footer>
     <script src="JS/favoritos.js"></script>
-    <script src="JS/detalle_pelicula.js"></script>
+    <script src="js_data/series_data.js"></script>
+    <script src="js_data/peliculas_data.js"></script>
+    <script src="JS/vistaSeries.js"></script>
+    <script src="JS/vistaPeliculas.js"></script>
+
 </body>
 
 </html>

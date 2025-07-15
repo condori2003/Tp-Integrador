@@ -34,7 +34,7 @@ window.addEventListener('DOMContentLoaded', function() {
 function mostrarCamposMetodoPago() {
   const metodo = document.querySelector('input[name="metodo"]:checked');
   document.getElementById('grupo-tarjeta').style.display = (metodo && metodo.value === 'tarjeta') ? 'block' : 'none';
-  document.getElementById('grupo-cupon').style.display = (metodo && metodo.value === 'cupon') ? 'block' : 'none';
+  document.getElementById('grupo-cupon').style.display = (metodo && metodo.value === 'cupon') ? 'flex' : 'none';
 }
 
 function validarPassword(pass) {
