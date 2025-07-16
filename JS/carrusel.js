@@ -1,62 +1,60 @@
-const  carrusel= document.querySelector('.carrusel');
+const carrusel = document.querySelector('.carrusel');
 
+// Obtener ID actual desde la URL
+const params = new URLSearchParams(window.location.search);
+const idActual = params.get("id");
+
+// Mostrar solo películas diferentes a la actual
 if (Array.isArray(window.peliculas)) {
-    window.peliculas.forEach(function (peli) {
-        // Crear la tarjeta
-        if(!window.location.search.split("=")[peli.id]){
-            const item = document.createElement('div');
-            item.classList.add('item');
-            item.dataset.tipo = peli.tipo;
-            item.dataset.nombre = peli.titulo;
-            item.dataset.categoria = peli.categoria;
+  window.peliculas.forEach(function (peli) {
+    if (peli.id !== idActual) {
+      const item = document.createElement('div');
+      item.classList.add('item');
+      item.dataset.tipo = peli.tipo;
+      item.dataset.nombre = peli.titulo;
+      item.dataset.categoria = peli.categoria;
 
-            
-            item.innerHTML =  
-            `<img src="${peli.img}" alt="${peli.titulo || 'Película'}">
-                <h5>${peli.titulo || 'Sin título'}</h5>
-            `;
+      item.innerHTML = `
+        <img src="${peli.img}" alt="${peli.titulo || 'Película'}">
+        <h5>${peli.titulo || 'Sin título'}</h5>
+      `;
 
-            item.style.cursor = 'pointer';
+      item.style.cursor = 'pointer';
 
-            // Agregar evento de click
-            item.addEventListener('click', function () {
-                window.location.href = `vistaDetalle.html?id=${peli.id}`;
-            });
+      item.addEventListener('click', function () {
+        window.location.href = `vistaDetalle.html?id=${peli.id}`;
+      });
 
-            carrusel.appendChild(item);
-        }
-    });
-}else if(Array.isArray(window.series)){
-    window.series.forEach(function (serie) {
-        // Crear la tarjeta
-        if(!window.location.search.split("=")[serie.id]){
-            const item = document.createElement('div');
-            item.classList.add('item');
-            item.dataset.tipo = serie.tipo;
-            item.dataset.nombre = serie.titulo;
-            item.dataset.categoria = serie.categoria;
+      carrusel.appendChild(item);
+    }
+  });
+} else if (Array.isArray(window.series)) {
+  window.series.forEach(function (serie) {
+    if (serie.id !== idActual) {
+      const item = document.createElement('div');
+      item.classList.add('item');
+      item.dataset.tipo = serie.tipo;
+      item.dataset.nombre = serie.titulo;
+      item.dataset.categoria = serie.categoria;
 
-            
-            item.innerHTML =  
-            `<img src="${serie.img}" alt="${serie.titulo || 'Serie'}">
-                <h5>${serie.titulo || 'Sin título'}</h5>
-            `;
+      item.innerHTML = `
+        <img src="${serie.img}" alt="${serie.titulo || 'Serie'}">
+        <h5>${serie.titulo || 'Sin título'}</h5>
+      `;
 
-            item.style.cursor = 'pointer';
+      item.style.cursor = 'pointer';
 
-            // Agregar evento de click
-            item.addEventListener('click', function () {
-                window.location.href = `vistaDetalleSerie.html?id=${serie.id}`;
-            });
+      item.addEventListener('click', function () {
+        window.location.href = `vistaDetalleSerie.html?id=${serie.id}`;
+      });
 
-            carrusel.appendChild(item);
-        }
-    });
-
-} 
-else {
-    console.error("window.peliculas no está definido o no es un array.");
+      carrusel.appendChild(item);
+    }
+  });
+} else {
+  console.error("window.peliculas o window.series no está definido o no es un array.");
 }
+
 
 const btnIzquierda = document.getElementById('btn-izquierda');
 const btnDerecha = document.getElementById('btn-derecha');
