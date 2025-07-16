@@ -20,7 +20,7 @@
             </a>
             <nav class="menu">
                 <ul>
-                    <li><a href="vistas_favoritos.html">💕</a></li>
+                    <!-- <li><a href="vistas_favoritos.html">💕</a></li> -->
                     <li><a href="vista_principal.html">Home</a></li>
                     <li><a href="vista_series.html">Series</a></li>
                     <li><a href="vista_peliculas.html">Películas</a></li>
@@ -30,10 +30,27 @@
             </nav>
         </div>
     </header>
-    <main class="peliculas">
-        <h2>Peliculas</h2>
+    <!-- Si se quiere mostrar la imagen hero -->
+    <section class="eventos-top" id="top"></section>
+    <!-- filtro  -->
+    <section class="categorias-container">
+        <p>Categorías</p>
+        <br />
+        <select class="select-categorias" id="categoriaSelect" onchange="filtrar()">
+            <option value="todos">Todos</option>
+            <option value="comedia">Comedia</option>
+            <option value="animadas">Animadas</option>
+            <option value="fantasia">Fantasía</option>
+            <option value="musical">Musical</option>
+        </select>
+        <input type="search" placeholder="Buscar por nombre" class="search" id="busqueda" oninput="filtrar()" />
+        <br />
+    </section>
+    <!-- grid de peliculas -->
+    <section class="peliculas">
+        <h2 class="titulo">Peliculas</h2>
         <div class="contenedor-peliculas"></div>
-    </main>
+    </section>
 
     <hr>
 
@@ -74,6 +91,7 @@
 
     <script src="js_data/peliculas_data.js"></script>
     <script src="JS/vistaPeliculas.js"></script>
+    <script src="JS/favoritos.js"></script>
 
 </body>
 

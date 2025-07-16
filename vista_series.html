@@ -20,7 +20,7 @@
             </a>
             <nav class="menu">
                 <ul>
-                    <li><a href="vistas_favoritos.html">💕</a></li>
+                    <!-- <li><a href="vistas_favoritos.html">💕</a></li> -->
                     <li><a href="vista_principal.html">Home</a></li>
                     <li><a href="vista_series.html">Series</a></li>
                     <li><a href="vista_peliculas.html">Películas</a></li>
@@ -30,10 +30,28 @@
             </nav>
         </div>
     </header>
-    <main class="Series">
-        <h2>Series</h2>
+    <section class="eventos-top" id="top"></section>
+    <section class="categorias-container">
+        <p>Categorías</p>
+        <br />
+        <select class="select-categorias" id="categoriaSelect" onchange="filtrar()">
+            <option value="todos">Todos</option>
+            <option value="drama">Drama</option>
+            <option value="comedia">Comedia</option>
+            <option value="ciencia-ficcion">Ciencia Ficción</option>
+            <option value="fantasia">Fantasía</option>
+            <option value="crimen">Crimen</option>
+            <option value="misterio">Misterio</option>
+            <option value="romanticas">Románticas</option>
+        </select>
+        <input type="search" placeholder="Buscar por nombre" class="search" id="busqueda" oninput="filtrar()" />
+        <br />
+    </section>
+
+    <section class="Series">
+        <h2 class="titulo">Series</h2>
         <div class="contenedor-series"></div>
-    </main>
+    </section>
 
     <hr>
 
@@ -72,6 +90,7 @@
         </div>
     </footer>
 
+    <script src="JS/favoritos.js"></script>
     <script src="js_data/series_data.js"></script>
     <script src="JS/vistaSeries.js"></script>
 

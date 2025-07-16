@@ -102,14 +102,14 @@ document.addEventListener("DOMContentLoaded", function () {
         card.setAttribute("data-categoria", fav.categoria);
 
         card.innerHTML = `
-  <a href="${fav.enlace}">
-    <img src="${fav.imagen}" alt="${fav.nombre}" class="card-img">
-    <div class="card-body">
-      <h5 class="card-title">${fav.nombre}</h5>
-    </div>
-  </a>
-  <button class="favorito-cards"><i class="fa-solid fa-heart favorito-activo"></i></button>
-`;
+          <a href="${fav.enlace}">
+            <img src="${fav.imagen}" alt="${fav.nombre}" class="card-img">
+            <div class="card-body">
+              <h5 class="card-title">${fav.nombre}</h5>
+            </div>
+          </a>
+          <button class="favorito-cards"><i class="fa-solid fa-heart favorito-activo"></i></button>
+        `;
 
         if (fav.tipo === "serie") {
           seriesContainer.appendChild(card);

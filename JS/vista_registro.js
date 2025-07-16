@@ -26,16 +26,17 @@ codigoTarjeta.addEventListener('input', function () {
 
 // Limitar input de número de tarjeta a 16 dígitos numéricos
 numeroTarjeta.addEventListener('input', function () {
-  // Quitar caracteres no numéricos
   this.value = this.value.replace(/\D/g, '');
 
-  // Limitar a 16 dígitos
+  const error = document.getElementById('error-numero-tarjeta');
   if (this.value.length > 16) {
     this.value = this.value.slice(0, 16);
-    document.getElementById('error-numero-tarjeta').textContent = "Solo se permiten hasta 16 dígitos.";
-  } 
-  document.getElementById('error-numero-tarjeta').textContent = "";
+    error.textContent = "Solo se permiten hasta 16 dígitos.";
+  } else {
+    error.textContent = "";
+  }
 });
+
 // Limitar input de pago
 pagoFacil.addEventListener('change', () => {
   if (pagoFacil.checked) rapiPago.checked = false 
@@ -232,7 +233,8 @@ form.addEventListener('submit', function(e) {
     // Guardar datos del usuario
     let metodoPago = document.getElementById('debito').checked ? 'tarjeta' : document.getElementById('cupon').checked ? 'cupón' : 'transferencia';
     let tipoCupon = document.getElementById('pago-facil').checked ? 'pagoFacil' : document.getElementById('rapi-pago').checked ? 'rapiPago' : null;
-    let numeroTarjeta = document.getElementById('debito').checked ? numeroTarjeta.value + " - " +claveTarjeta.value : null;
+    // let numeroTarjetaFinal = document.getElementById('debito').checked ? numeroTarjeta.value + " - " + codigoTarjeta.value : null;
+    let numeroTarjetaFinal = document.getElementById('debito').checked ? numeroTarjeta.value + " - " + codigoTarjeta.value : null;
     usuarios.push({
       usuario: usuario.value,
       password: contrasena.value,
@@ -240,7 +242,7 @@ form.addEventListener('submit', function(e) {
       nombre: nombre.value,
       apellido: apellido.value,
       metodoPago: metodoPago,
-      numeroTarjeta: numeroTarjeta,
+      numeroTarjeta: numeroTarjetaFinal,
       tipoCupon: tipoCupon
     });
     localStorage.setItem("usuarios", JSON.stringify(usuarios));

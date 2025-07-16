@@ -3,7 +3,7 @@ const  carrusel= document.querySelector('.carrusel');
 if (Array.isArray(window.peliculas)) {
     window.peliculas.forEach(function (peli) {
         // Crear la tarjeta
-        if(window.location.search.split("=")[peli.id]){
+        if(!window.location.search.split("=")[peli.id]){
             const item = document.createElement('div');
             item.classList.add('item');
             item.dataset.tipo = peli.tipo;
@@ -26,8 +26,7 @@ if (Array.isArray(window.peliculas)) {
             carrusel.appendChild(item);
         }
     });
-}
-if(Array.isArray(window.series)){
+}else if(Array.isArray(window.series)){
     window.series.forEach(function (serie) {
         // Crear la tarjeta
         if(!window.location.search.split("=")[serie.id]){
